@@ -15,38 +15,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="card">
 				<div class="card-header">
 					<h4 class="card-title" id="basic-layout-form">
-					<?php if($AboutusId==1)
+					<?php if($ServiceId==1)
 					{
-						echo	"Edit About Us";
+						echo	"Edit Service";
 					}
 					else{
-					echo	"Add About Us";
+					echo	"Add Service";
 					}
 					?>
 					<a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-					<a href="<?php echo base_url();?>About/Aboutlist" class="btn btn-black" style="float:right">Back to About List</a>
+					<a href="<?php echo base_url();?>services/servicelist" class="btn btn-black" style="float:right">Back to Services List</a>
 				</div>
 				</h4>
 				<div class="card-body collapse in">
 					<div class="card-block">
 				
 						<form class="form" method="post" enctype="multipart/form-data" id="form_valid"
-						 action="<?php echo base_url();?>About/Aboutadd">
+						 action="<?php echo base_url();?>services/serviceadd">
 					
 							<div class="form-body">
 								<h4 class="form-section"><i class="icon-clipboard4"></i> Requirements</h4>
 							
 								<div class="form-group">
-									<input type="hidden" value="<?php echo $AboutusId; ?>" name="AboutusId">
-									<label>About Title</label>
-									<input type="text" class="form-control" placeholder="About Title" name="AboutTitle" value="<?php echo $AboutTitle;?>" minlength="3" maxlength="100">
+									<input type="hidden" value="<?php echo $ServiceId; ?>" name="ServiceId">
+									<label>Service Name</label>
+									<input type="text" class="form-control" placeholder="Service Name" name="ServiceName" value="<?php echo $ServiceName;?>" minlength="3" maxlength="100">
+								</div>
+
+								<div class="form-group">
+									<label>Service Title</label>
+									<input type="text" class="form-control" placeholder="Service Title" name="ServiceTitle" value="<?php echo $ServiceTitle;?>" minlength="3" maxlength="100">
 								</div>
 							
 
 								<div class="form-group">
-									<label>About Description</label>
-									<textarea id="editor1" rows="5" class="form-control" name="AboutDescription">
-									<?php echo $AboutDescription; ?></textarea>
+									<label>Service Description</label>
+									<textarea id="editor1" rows="5" class="form-control" name="ServiceDescription">
+									<?php echo $ServiceDescription; ?></textarea>
 									<script>
 										CKEDITOR.replace('editor1');
 									</script>
@@ -55,25 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								
 
 								
-								<div class="form-group  uploadfrm">
-									<label>About Image</label>
-									<p><span class="btn btn-black btn-file">
-										<input type="hidden" name="pre_about_image" value="<?php echo $AboutImage;?>">
-									Upload about image <input type="file" name="about_image"  onchange="readURL(this);">
-									</span></p>									
-									<span id="profileerror"></span>
-								</div>
-								<h6>Uplopad only jpeg,jpg,png,bmp image file</h6>
-									<div class="preview">
-									
-									<?php if($AboutImage){ ?>
-										<img id="blah" src="<?php echo base_url()?>upload/aboutimage/<?php echo $AboutImage;?>" class="img-thumbnail border-0" style="display: block;  width: 100px; height: 100px;">
-
-									<?php } else{?>
-									<img id="blah" src="" class="img-thumbnail border-0" style="display: none;  width: 100px; height: 100px;">
-									<?php } ?>
-
-								</div>
+								
 								
 								<?php  if($IsActive!=''){ ?>                                
 								<div class="form-group">
@@ -113,9 +100,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 							<div class="form-actions">
-									 <button class="btn btn-black " type="submit"><i class="icon-ok"></i> <?php echo ($AboutusId!='')?'Update':'Submit' ?></button>
+									 <button class="btn btn-black " type="submit"><i class="icon-ok"></i> <?php echo ($ServiceId!='')?'Update':'Submit' ?></button>
 							
-									<input type="button" name="cancel" class="btn btn-default" value="Cancel" onClick="location.href='<?php echo base_url(); ?>About/Aboutlist'">
+									<input type="button" name="cancel" class="btn btn-default" value="Cancel" onClick="location.href='<?php echo base_url(); ?>services/servicelist'">
 								
 							</div>
 						</form>
@@ -142,39 +129,23 @@ $(document).ready(function()
 {
        $('#form_valid').validate({
 			rules: {
-				AboutTitle:{              
+				ServiceName:{              
+					required: true,                
+				},
+				ServiceTitle:{              
 					required: true,                
 				}, 
-				about_image:{
-					//required: true,
-					extension: "jpg|jpeg|png|bmp",
-					filesize: 2097152,   
-				}, 
+				ServiceDescription:{              
+					required: true,                
+				},
 							
 			 },
 
-			 errorPlacement: function (error, element) {
-            //console.log('dd', element.attr("name"))
-            if (element.attr("name") == "about_image") {
-                error.appendTo("#profileerror");
-            } else{
-                  error.insertAfter(element)
-            }
-        } 
     });
 });
 
  
 
-function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#blah').css('display', 'block');
-                    $('#blah').attr('src', e.target.result);
-                };
-             reader.readAsDataURL(input.files[0]);
-            }
-        }	                
+	                
 
 </script>

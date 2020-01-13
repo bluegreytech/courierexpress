@@ -268,3 +268,135 @@ ERROR - 2020-01-10 11:50:53 --> 404 Page Not Found: Default/images
 ERROR - 2020-01-10 11:50:53 --> 404 Page Not Found: Default/images
 ERROR - 2020-01-10 11:50:56 --> 404 Page Not Found: Default/images
 ERROR - 2020-01-10 11:50:56 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 12:55:44 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 12:55:44 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 12:59:10 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 103
+ERROR - 2020-01-10 12:59:10 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 111
+ERROR - 2020-01-10 12:59:43 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 103
+ERROR - 2020-01-10 12:59:43 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 111
+ERROR - 2020-01-10 13:00:04 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 103
+ERROR - 2020-01-10 13:00:04 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 111
+ERROR - 2020-01-10 13:01:31 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 103
+ERROR - 2020-01-10 13:01:31 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 111
+ERROR - 2020-01-10 13:01:33 --> 404 Page Not Found: Abouthome/Aboutlist
+ERROR - 2020-01-10 13:01:42 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 103
+ERROR - 2020-01-10 13:01:42 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 111
+ERROR - 2020-01-10 13:01:47 --> 404 Page Not Found: Abouthome/Aboutlist
+ERROR - 2020-01-10 13:01:49 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 103
+ERROR - 2020-01-10 13:01:49 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 111
+ERROR - 2020-01-10 13:02:20 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 103
+ERROR - 2020-01-10 13:02:20 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 111
+ERROR - 2020-01-10 13:02:21 --> Severity: error --> Exception: Call to undefined method Home_model::getabout() C:\xampp\htdocs\courierexpress\admin\application\controllers\Abouthome.php 19
+ERROR - 2020-01-10 13:03:26 --> Severity: error --> Exception: Call to undefined method Home_model::getabout() C:\xampp\htdocs\courierexpress\admin\application\controllers\Abouthome.php 19
+ERROR - 2020-01-10 13:03:29 --> Severity: error --> Exception: Call to undefined method Home_model::getabout() C:\xampp\htdocs\courierexpress\admin\application\controllers\Abouthome.php 19
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 12
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 19
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 19
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 20
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 20
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 25
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 29
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 36
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 36
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 37
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 37
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 46
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 51
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 51
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 52
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 52
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 57
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 61
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 66
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 66
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 67
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 67
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 76
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 81
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 81
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 82
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 82
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 87
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 90
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 94
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 94
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 95
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 95
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 100
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 103
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 107
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 107
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 108
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 108
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 113
+ERROR - 2020-01-10 13:05:08 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 116
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 121
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 121
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 122
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 122
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 130
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 135
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 135
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 136
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 136
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 144
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 149
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 149
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 149
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 150
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 150
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 150
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 155
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 158
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 161
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 166
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 166
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 167
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 167
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 172
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 175
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 180
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 181
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: activeTab C:\xampp\htdocs\courierexpress\admin\application\views\common\sidebar.php 187
+ERROR - 2020-01-10 13:05:09 --> Severity: Notice --> Undefined variable: result C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homelist.php 46
+ERROR - 2020-01-10 13:05:09 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:05:09 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:05:50 --> Severity: Notice --> Undefined property: Abouthome::$About_model C:\xampp\htdocs\courierexpress\admin\application\controllers\Abouthome.php 19
+ERROR - 2020-01-10 13:05:50 --> Severity: error --> Exception: Call to a member function getabout() on null C:\xampp\htdocs\courierexpress\admin\application\controllers\Abouthome.php 19
+ERROR - 2020-01-10 13:06:19 --> Severity: error --> Exception: Call to undefined method Home_model::getabout() C:\xampp\htdocs\courierexpress\admin\application\controllers\Abouthome.php 19
+ERROR - 2020-01-10 13:07:10 --> Severity: error --> Exception: Call to undefined method Home_model::getabout() C:\xampp\htdocs\courierexpress\admin\application\controllers\Abouthome.php 19
+ERROR - 2020-01-10 13:07:25 --> Severity: error --> Exception: Call to undefined method Home_model::getabout() C:\xampp\htdocs\courierexpress\admin\application\controllers\Abouthome.php 19
+ERROR - 2020-01-10 13:07:51 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:07:51 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:08:10 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:08:10 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:08:30 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:08:30 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:08:33 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\about\aboutusadd.php 103
+ERROR - 2020-01-10 13:08:33 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\about\aboutusadd.php 111
+ERROR - 2020-01-10 13:08:40 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 103
+ERROR - 2020-01-10 13:08:40 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 111
+ERROR - 2020-01-10 13:08:43 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:08:43 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:08:51 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 103
+ERROR - 2020-01-10 13:08:51 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 111
+ERROR - 2020-01-10 13:08:54 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:08:54 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:09:15 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:09:15 --> 404 Page Not Found: Default/images
+ERROR - 2020-01-10 13:09:16 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 103
+ERROR - 2020-01-10 13:09:16 --> Severity: Notice --> Undefined variable: AboutImage C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 111
+ERROR - 2020-01-10 13:23:14 --> Severity: Notice --> Undefined variable: AboutusId C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 18
+ERROR - 2020-01-10 13:23:15 --> Severity: Notice --> Undefined variable: AboutusId C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 40
+ERROR - 2020-01-10 13:23:15 --> Severity: Notice --> Undefined variable: SecondTitle C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 57
+ERROR - 2020-01-10 13:23:15 --> Severity: Notice --> Undefined variable: SecondDescription C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 64
+ERROR - 2020-01-10 13:23:15 --> Severity: Notice --> Undefined variable: ThirdTitle C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 72
+ERROR - 2020-01-10 13:23:15 --> Severity: Notice --> Undefined variable: ThirdDescription C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 79
+ERROR - 2020-01-10 13:23:15 --> Severity: Notice --> Undefined variable: FourthTitle C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 87
+ERROR - 2020-01-10 13:23:15 --> Severity: Notice --> Undefined variable: FourthDescription C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 94
+ERROR - 2020-01-10 13:23:15 --> Severity: Notice --> Undefined variable: AboutusId C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 158
+ERROR - 2020-01-10 13:25:11 --> Severity: Notice --> Undefined variable: HomeTitle C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 42
+ERROR - 2020-01-10 13:25:30 --> Severity: Notice --> Undefined variable: HomeTitle C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 42
+ERROR - 2020-01-10 13:25:31 --> Severity: Notice --> Undefined variable: HomeDescription C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 48
+ERROR - 2020-01-10 13:25:31 --> Severity: Notice --> Undefined variable: HomeTitle C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 42
+ERROR - 2020-01-10 13:25:31 --> Severity: Notice --> Undefined variable: HomeDescription C:\xampp\htdocs\courierexpress\admin\application\views\abouthome\homeadd.php 48

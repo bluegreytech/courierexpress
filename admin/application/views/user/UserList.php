@@ -68,9 +68,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <td>
                                         <!-- <?php// echo anchor('user/Edituser/'.$row->UserId,'<i class="ficon icon-pencil2" data-toggle="tooltip" title="Edit User"></i> '); ?> -->
                                         <a href="javascript:void(0)"  onclick="deletedata('<?php echo $row->UserId; ?>')" ><i class="ficon icon-bin" data-toggle="tooltip" title="Delete User"></i></a>
-                                        
-                                      <?php echo anchor('user/Cabhistory/'.$row->ContactNumber,'<i class="ficon icon-history" data-toggle="tooltip" title="User Cab History"></i> '); ?>
-                                        
                                     </td>  
                                 </tr>      
                                 <?php

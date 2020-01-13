@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 									<div class="form-group">
 									<label>Mobile No.</label>
-									<input type="text" class="form-control" placeholder="Mobile no." name="AdminContact" value="<?php echo $AdminContact;?>">
+									<input type="text" class="form-control" placeholder="Mobile no." name="AdminContact" id="AdminContact" value="<?php echo $AdminContact;?>">
 								</div>
 								<div class="form-group">
 									<label>Email Address</label>
@@ -161,6 +161,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     ?>
  <script>
+ 	$("#AdminContact").on("input", function(evt) {
+		var self = $(this);
+		self.val(self.val().replace(/[^\d].+/, ""));
+		if ((evt.which < 48 || evt.which > 57)) 
+		{
+			evt.preventDefault();
+		}});
  	$(document).ready(function() {  
  	
     $.validator.addMethod("noSpace", function(value, element) {        

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-    <title>Yashdeep Travels</title>
+    <title>Gandhi Express</title>
     
     <link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>default/images/ico/favicon.png">
     

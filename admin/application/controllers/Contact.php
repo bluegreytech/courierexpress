@@ -10,7 +10,35 @@ class Contact extends CI_Controller {
       
     }
 
-	function Contactlist()
+	function inquirylist()
+	{	
+		if(!check_admin_authentication()){ 
+			redirect(base_url());
+		}else{	
+			$data['activeTab']="inquirylist";		
+			$data['result']=$this->Contact_model->getinquirylist();
+			$this->load->view('contact/inquirylist',$data);
+		}
+	}
+	
+
+	function inquiry_delete(){
+		if(!check_admin_authentication()){ 
+			redirect(base_url());
+		}
+	
+			$data= array('IsDelete' =>'1');
+			$ContactId=$this->input->post('ContactId');
+			$this->db->where("ContactId",$ContactId);			
+			$res=$this->db->update('tblinquiry',$data);
+			//echo $this->db->last_query();die;
+			echo json_encode($res);
+			die;
+		
+	}
+
+
+	function contactlist()
 	{	
 		if(!check_admin_authentication()){ 
 			redirect(base_url());
@@ -21,15 +49,77 @@ class Contact extends CI_Controller {
 		}
 	}
 	
+	public function contactadd()
+	{      
+		if(!check_admin_authentication()){ 
+			redirect(base_url());
+		}   
+			
+		$data=array();	
+		$data['OfficeId']=$this->input->post('OfficeId');
+		$data['OfficeTitle']=$this->input->post('OfficeTitle');
+		$data['OfficeLocation']=$this->input->post('OfficeLocation');
+		$data['Address']=$this->input->post('Address');
+		$data['ContactPersonName']=$this->input->post('ContactPersonName');
+		$data['LandlineNumber']=$this->input->post('LandlineNumber');
+		$data['ContactNumber']=$this->input->post('ContactNumber');
+		$data['EmailAddress']=$this->input->post('EmailAddress');
+		$data['IsActive']=$this->input->post('IsActive');
+
+		if($_POST)
+		{	
+				if($this->input->post("OfficeId")!="")
+				{
+					$this->Contact_model->contact_update();
+					$this->session->set_flashdata('success', 'Record has been Updated Succesfully!');
+					redirect('contact/contactlist');
+					
+				}
+				else
+				{ 
+					$this->Contact_model->contact_add();
+					$this->session->set_flashdata('success', 'Record has been Inserted Succesfully!');
+					redirect('contact/contactlist');
+				
+				}
+		}	
+			
+		    $data['activeTab']="contactadd";	
+			$this->load->view('contact/contactadd',$data);
+				
+	}
+	
+	function editcontact($OfficeId){
+		if(!check_admin_authentication()){ 
+			redirect(base_url());
+		}
+			$data=array();
+			$result=$this->Contact_model->getdata($OfficeId);	
+			$data['redirect_page']='aboutlist';
+			$data['OfficeId']=$result['OfficeId'];
+			$data['OfficeTitle']=$result['OfficeTitle'];
+			$data['OfficeLocation']=$result['OfficeLocation'];
+			$data['Address']=$result['Address'];	
+			$data['ContactPersonName']=$result['ContactPersonName'];
+			$data['LandlineNumber']=$result['LandlineNumber'];
+			$data['ContactNumber']=$result['ContactNumber'];
+			$data['EmailAddress']=$result['EmailAddress'];		
+			$data['IsActive']=$result['IsActive'];
+			//echo "<pre>";print_r($data);die;	
+			$data['activeTab']="contactadd";	
+			$this->load->view('contact/contactadd',$data);	
+		
+	}
+
 
 	function contact_delete(){
 		if(!check_admin_authentication()){ 
 			redirect(base_url());
 		}
-			$data= array('IsDelete' =>'1');
-			$ContactId=$this->input->post('ContactId');
-			$this->db->where("ContactId",$ContactId);			
-			$res=$this->db->update('tblcontactus',$data);
+			$data= array('IsActive' =>'Inactive','IsDelete' =>'1');
+			$OfficeId=$this->input->post('OfficeId');
+			$this->db->where("OfficeId",$OfficeId);			
+			$res=$this->db->update('tblcontact',$data);
 			//echo $this->db->last_query();die;
 			echo json_encode($res);
 			die;
@@ -37,56 +127,5 @@ class Contact extends CI_Controller {
 	}
 
 
-	function luxuryquotelist()
-	{	
-		if(!check_admin_authentication()){ 
-			redirect(base_url());
-		}else{	
-			$data['activeTab']="luxuryquotelist";		
-			$data['result']=$this->Contact_model->get_luxuryquotelist();
-			$this->load->view('contact/luxuryquoteslist',$data);
-		}
-	}
-	
-
-	function luxurysegment_delete(){
-		if(!check_admin_authentication()){ 
-			redirect(base_url());
-		}
-			$data= array('IsActive'=>'Inactive','IsDelete' =>'1');
-			$LuxuryQuoteId=$this->input->post('LuxuryQuoteId');
-			$this->db->where("LuxuryQuoteId",$LuxuryQuoteId);			
-			$res=$this->db->update('tblluxuryquotes',$data);
-			//echo $this->db->last_query();die;
-			echo json_encode($res);
-			die;
-		
-	}
-
-
-	function carrierlist()
-	{	
-		if(!check_admin_authentication()){ 
-			redirect(base_url());
-		}else{	
-			$data['activeTab']="carrierlist";		
-			$data['result']=$this->Contact_model->get_carrierlist();
-			$this->load->view('contact/carrierlist',$data);
-		}
-	}
-
-	function carrier_delete(){
-		if(!check_admin_authentication()){ 
-			redirect(base_url());
-		}
-			$data= array('IsActive'=>'Inactive','IsDelete' =>'1');
-			$CarrierInquiryId=$this->input->post('CarrierInquiryId');
-			$this->db->where("CarrierInquiryId",$CarrierInquiryId);			
-			$res=$this->db->update('tblcarrierinquiry',$data);
-			//echo $this->db->last_query();die;
-			echo json_encode($res);
-			die;
-		
-	}
 	
 }

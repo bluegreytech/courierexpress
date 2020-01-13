@@ -415,14 +415,22 @@ class Login_model extends CI_Model
        
     } 
 
+  function getbranch()
+  {
+    $this->db->select('*');
+    $this->db->from('tblcontact');
+    $this->db->where('IsDelete','0');
+    $query=$this->db->get();
+    $res = $query->result();
+    return $res;
+  }
 
   function getuser()
   {
     $this->db->select('*');
     $this->db->from('tbluser');
     $this->db->where('IsDelete','0');
-    $this->db->order_by('UserId','desc');
-    $this->db->group_by('ContactNumber');
+    //$this->db->order_by('UserId','desc');
     $query=$this->db->get();
     $res = $query->result();
     return $res;
@@ -446,7 +454,7 @@ class Login_model extends CI_Model
   function get_inquiry()
   {
     $this->db->select('*');
-    $this->db->from('tblcontactus');
+    $this->db->from('tblinquiry');
     $this->db->where('IsDelete','0');
     $query=$this->db->get();
     $res = $query->result();
@@ -454,14 +462,35 @@ class Login_model extends CI_Model
   }
 
   
-  function get_segment()
+  function get_product()
   {
     $this->db->select('*');
-    $this->db->from('tblluxuryquotes');
+    $this->db->from('tblproduct');
     $this->db->where('IsDelete','0');
     $query=$this->db->get();
     $res = $query->result();
     return $res;
   }
+
+  function get_services()
+  {
+    $this->db->select('*');
+    $this->db->from('tblservice');
+    $this->db->where('IsDelete','0');
+    $query=$this->db->get();
+    $res = $query->result();
+    return $res;
+  }
+
+   function get_resources()
+  {
+    $this->db->select('*');
+    $this->db->from('tblresources');
+    $this->db->where('IsDelete','0');
+    $query=$this->db->get();
+    $res = $query->result();
+    return $res;
+  }
+  
 
 }

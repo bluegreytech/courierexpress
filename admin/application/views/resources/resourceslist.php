@@ -21,9 +21,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">List of Inquired
+                <h4 class="card-title">List of Resources
                 <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-                <a href="<?php echo base_url();?>contact/contactadd" class="btn btn-black" style="float:right">Add Contact Us</a>
+                <a href="<?php echo base_url();?>Resources/resourcesadd" class="btn btn-black" style="float:right">Add Resources</a>
                 </h4>
             </div>
             <div class="card-body collapse in">
@@ -32,11 +32,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <thead class="thead-inverse">
                             <tr>
                                 <th>Sr No</th>
-                                <th>Office Title </th>                              
-                                <th>Contact Person</th>
-								<!-- <th>Contact Number</th> -->
-                                <th>Address</th>
-                                <th>Status</th>
+                                <th>Resources</th>                              
+								<th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -46,13 +43,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 if($result){                             
                                 foreach($result as $row)
                                 {
-                            ?>
+                        ?>
                             <tr>
+                            
                                     <td><?php echo $i; ?></td>
-                                    <td><?php echo $row->OfficeTitle; ?></td>
-                                    <td><?php echo $row->ContactPersonName; ?></td>
-                                   <!--  <td><?php echo $row->ContactNumber; ?></td> -->
-                                    <td><?php echo $row->Address; ?></td>
+                                    <td><?php echo $row->ResourcesTitle; ?></td>
+                                    
                                     <td>
                                         <?php if($row->IsActive=="Active")
                                             {
@@ -66,8 +62,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         ?>
                                     </td>
                                     <td>
-                                        <?php echo anchor('contact/editcontact/'.$row->OfficeId,'<i class="ficon icon-pencil2"></i>'); ?>
-                                        <a onclick="deletedata('<?php echo $row->OfficeId; ?>')" ><i class="ficon icon-bin"></i></a>   
+                                        <?php echo anchor('Resources/editresources/'.$row->ResourcesId,'<i class="ficon icon-pencil2"></i>'); ?>
+                                        <a onclick="deletedata('<?php echo $row->ResourcesId; ?>')" ><i class="ficon icon-bin"></i></a>
                                     </td>  
                                 </tr>      
                                 <?php
@@ -97,6 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               	<p>Are you sure you want to delete this record?</p>
               </div>
               <div class="modal-footer text-center">
+              	<!--<button type="button" class="next_btn" id="yes_btn" name="update">Yes</button>-->
 				<center><button type="button" class="btn-md btn-icon btn-link p4" id="yes_btn" ><a href="" id="deleteYes" value="Yes"  class="btn btn-success">Yes</a></button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">No</button></center>
             </div>
@@ -116,18 +113,17 @@ $(function() {
    
 });
 
-
-function deletedata(OfficeId){  
+function deletedata(ResourcesId){  
     $('#myModal').modal('show');
-   // alert(OfficeId);
+  // alert(id);
         $('#yes_btn').click(function(){
            
-                url="<?php echo base_url();?>contact/contact_delete/";
+                url="<?php echo base_url();?>Resources/resources_delete/";
                 //alert(url);
                 $.ajax({
                 url: url,
                 type: "post",
-                data: {OfficeId:OfficeId} ,
+                data: {ResourcesId:ResourcesId} ,
                 success: function (response) {   
                     console.log(response);  
                     return false;        
@@ -141,6 +137,9 @@ function deletedata(OfficeId){
            
 
         });
+    
+   
+
 }
 </script>
 

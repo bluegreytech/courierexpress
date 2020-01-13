@@ -35,7 +35,7 @@
 
           <li class="nav-item <?php echo ($activeTab == "AddUser"|| $activeTab == "Userlist") ? "open" : ""; ?>">
             <a class="<?php echo ($activeTab == "AddUser" || $activeTab == "Userlist") ? "active" : ""; ?>">
-              <i class="icon-user"></i><span data-i18n="nav.dash.main" class="menu-title">User</span>
+              <i class="icon icon-users"></i><span data-i18n="nav.dash.main" class="menu-title">User</span>
             </a>
             <ul class="menu-content">
              <!--  <li>
@@ -44,6 +44,21 @@
               <li>
               <li>
                 <a href="<?php echo base_url(); ?>user/Userlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "Userlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of User</a>
+              </li>
+            </ul>
+          </li> 
+
+          <li class="nav-item <?php echo($activeTab == "homeadd" || $activeTab =="homelist") ? "open" : ""; ?>">
+            <a class="<?php echo ($activeTab == "homeadd" || $activeTab == "homelist") ? "active" : ""; ?>">
+              <i class="icon-home"></i><span data-i18n="nav.dash.main" class="menu-title">About Home</span>
+            </a>
+            <ul class="menu-content">
+              <li>
+                <a href="<?php echo base_url(); ?>Abouthome/homeadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "homeadd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add About Home</a>
+              </li>
+
+              <li>
+                <a href="<?php echo base_url(); ?>Abouthome" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "homelist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of About Home</a>
               </li>
             </ul>
           </li> 
@@ -63,106 +78,84 @@
             </ul>
           </li> 
 
-           <li class="nav-item <?php echo($activeTab == "cityadd"||$activeTab =="citylist") ? "open" : ""; ?>">
-          <a class="<?php echo ($activeTab == "cityadd" || $activeTab == "citylist") ? "active" : ""; ?>">
-            <i class="icon-car"></i><span data-i18n="nav.dash.main" class="menu-title">Routes</span>
-          </a>
-          <ul class="menu-content">
-            <li>
-                <a href="<?php echo base_url(); ?>city/cityadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "cityadd") ? "active" : ""; ?>"><i class="icon-plus"></i>Add Routes</a>
-            </li>
-            <li>
-              <a href="<?php echo base_url(); ?>city" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "citylist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Routes </a>
-            </li>
-          </ul>
-
-          <li class="nav-item <?php echo($activeTab == "carbrandadd"||$activeTab =="carbrandlist") ? "open" : ""; ?>">
-          <a class="<?php echo ($activeTab == "carbrandadd" || $activeTab == "carbrandlist") ? "active" : ""; ?>">
-            <i class="icon-car"></i><span data-i18n="nav.dash.main" class="menu-title">Car Brand</span>
-          </a>
-          <ul class="menu-content">
-            <li>
-                <a href="<?php echo base_url(); ?>car/carbrandadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "carbrandadd") ? "active" : ""; ?>"><i class="icon-plus"></i>Add Car Brand</a>
-            </li>
-            <li>
-              <a href="<?php echo base_url(); ?>car/carbrandlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "carbrandlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Car Brand</a>
-            </li>
-          </ul>
-
-          <li class="nav-item <?php echo($activeTab == "caradd"||$activeTab =="carlist") ? "open" : ""; ?>">
-            <a class="<?php echo ($activeTab == "caradd" || $activeTab == "carlist") ? "active" : ""; ?>">
-              <i class="icon-car"></i><span data-i18n="nav.dash.main" class="menu-title">Car</span>
+          <li class="nav-item <?php echo($activeTab == "productadd" || $activeTab =="productlist") ? "open" : ""; ?>">
+            <a class="<?php echo ($activeTab == "productadd" || $activeTab == "productlist") ? "active" : ""; ?>">
+              <i class="icon-product-hunt"></i><span data-i18n="nav.dash.main" class="menu-title">Product</span>
             </a>
             <ul class="menu-content">
               <li>
-                  <a href="<?php echo base_url(); ?>car/caradd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "caradd") ? "active" : ""; ?>"><i class="icon-plus"></i>Add Car</a>
+                <a href="<?php echo base_url(); ?>product/productadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "productadd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add Product</a>
               </li>
+
               <li>
-                <a href="<?php echo base_url(); ?>car/carlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "carlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Car</a>
+                <a href="<?php echo base_url(); ?>Product/productlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "productlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Product</a>
               </li>
             </ul>
           </li> 
 
-           <li class="nav-item <?php echo($activeTab == "contactadd"||$activeTab =="luxuryquotelist") ? "open" : ""; ?>">
-            <a class="<?php echo ($activeTab == "contactadd" || $activeTab == "luxuryquotelist") ? "active" : ""; ?>">
-              <i class="icon-address-book"></i><span data-i18n="nav.dash.main" class="menu-title">Segment Contact</span>
+          <li class="nav-item <?php echo($activeTab == "serviceadd" || $activeTab =="servicelist") ? "open" : ""; ?>">
+            <a class="<?php echo ($activeTab == "serviceadd" || $activeTab == "servicelist") ? "active" : ""; ?>">
+              <i class="icon-tasks"></i><span data-i18n="nav.dash.main" class="menu-title">Services</span>
+            </a>
+          <ul class="menu-content">
+            <li>
+                <a href="<?php echo base_url(); ?>services/serviceadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "serviceadd") ? "active" : ""; ?>"><i class="icon-plus"></i>Add Services</a>
+            </li>
+            <li>
+              <a href="<?php echo base_url(); ?>services/servicelist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "servicelist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Services </a>
+            </li>
+          </ul>
+
+         
+
+          <li class="nav-item <?php echo($activeTab == "resourcesadd" || $activeTab =="resourceslist") ? "open" : ""; ?>">
+          <a class="<?php echo ($activeTab == "resourcesadd" || $activeTab == "resourceslist") ? "active" : ""; ?>">
+            <i class="icon-adjust"></i><span data-i18n="nav.dash.main" class="menu-title">Resources</span>
+          </a>
+          <ul class="menu-content">
+            <li>
+                <a href="<?php echo base_url(); ?>Resources/resourcesadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "resourcesadd") ? "active" : ""; ?>"><i class="icon-plus"></i>Add Resources</a>
+            </li>
+            <li>
+              <a href="<?php echo base_url(); ?>Resources/resourceslist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "resourceslist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Resources</a>
+            </li>
+          </ul>
+
+         
+
+          
+
+          <li class="nav-item <?php echo($activeTab == "inquiryadd" || $activeTab =="inquirylist") ? "open" : ""; ?>">
+            <a class="<?php echo ($activeTab == "inquiryadd" || $activeTab == "inquirylist") ? "active" : ""; ?>">
+              <i class="icon-question-circle"></i><span data-i18n="nav.dash.main" class="menu-title">Inquiry</span>
             </a>
             <ul class="menu-content">
               <!-- <li>
-                <a href="<?php// echo base_url(); ?>About/Aboutadd" data-i18n="nav.dash.main" class="menu-item <?php //echo ($activeTab == "aboutusadd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add About</a>
+                <a href="<?php// echo base_url(); ?>About/Aboutadd" data-i18n="nav.dash.main" class="menu-item <?php //echo ($activeTab == "inquiryadd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add About</a>
               </li> -->
               <li>
-                <a href="<?php echo base_url(); ?>contact/luxuryquotelist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "acontactlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Luxury Inquiry </a>
+                <a href="<?php echo base_url(); ?>contact/inquirylist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "inquirylist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Inquiry </a>
               </li>
             </ul>
           </li> 
 
-          <li class="nav-item <?php echo($activeTab == "contactadd"||$activeTab =="contactlist") ? "open" : ""; ?>">
+          
+          <li class="nav-item <?php echo($activeTab == "contactadd" || $activeTab =="contactlist") ? "open" : ""; ?>">
             <a class="<?php echo ($activeTab == "contactadd" || $activeTab == "contactlist") ? "active" : ""; ?>">
               <i class="icon-address-book"></i><span data-i18n="nav.dash.main" class="menu-title">Contact Us</span>
             </a>
             <ul class="menu-content">
-              <!-- <li>
-                <a href="<?php// echo base_url(); ?>About/Aboutadd" data-i18n="nav.dash.main" class="menu-item <?php //echo ($activeTab == "aboutusadd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add About</a>
-              </li> -->
               <li>
-                <a href="<?php echo base_url(); ?>contact/Contactlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "acontactlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Contact </a>
+                <a href="<?php echo base_url(); ?>Contact/contactadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "contactadd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add Contcat</a>
+              </li>
+              <li>
+                <a href="<?php echo base_url(); ?>Contact/contactlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "contactlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Contcat </a>
               </li>
             </ul>
           </li> 
+          
 
-           <li class="nav-item <?php echo($activeTab == "carreradd" || $activeTab =="carrerlist" || $activeTab =="carrierlist") ? "open" : ""; ?>">
-            <a class="<?php echo ($activeTab == "carreradd" || $activeTab == "carrerlist" || $activeTab =="carrierlist") ? "active" : ""; ?>">
-              <i class="icon-address-book"></i><span data-i18n="nav.dash.main" class="menu-title">Carrier</span>
-            </a>
-            <ul class="menu-content">
-              <li>
-                <a href="<?php echo base_url(); ?>carrer/carreradd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "carreradd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add Carrier</a>
-              </li>
-              <li>
-                <a href="<?php echo base_url(); ?>carrer" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "carrerlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Carrier </a>
-              </li>
-               <li>
-                <a href="<?php echo base_url(); ?>contact/carrierlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "carrierlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Carrier Inquiry</a>
-              </li>
-            </ul>
-          </li> 
-
-          <li class="nav-item <?php echo($activeTab == "testimonialadd"||$activeTab =="testimoniallist") ? "open" : ""; ?>">
-            <a class="<?php echo ($activeTab == "testimonialadd" || $activeTab == "testimoniallist") ? "active" : ""; ?>">
-              <i class="icon-tasks"></i><span data-i18n="nav.dash.main" class="menu-title">Testimonial</span>
-            </a>
-            <ul class="menu-content">
-              <li>
-                  <a href="<?php echo base_url(); ?>Testimonial/Testimonialadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "testimonialadd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add Testimonial</a>
-              </li>
-              <li>
-                <a href="<?php echo base_url(); ?>Testimonial/Testimoniallist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "testimoniallist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Testimonial </a>
-              </li>
-            </ul>
-          </li> 
-
-          <li class="nav-item <?php echo $activeTab =="sitesettinglist" ? "open" : ""; ?>">
+        <!--   <li class="nav-item <?php echo $activeTab =="sitesettinglist" ? "open" : ""; ?>">
             <a class="<?php echo  $activeTab == "sitesettinglist" ? "active" : ""; ?>">
               <i class="icon-cog"></i><span data-i18n="nav.dash.main" class="menu-title">Site Setting</span>
             </a>
@@ -172,7 +165,7 @@
                 <a href="<?php echo base_url(); ?>home/Sitesetting" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "sitesettinglist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Sitesetting </a>
               </li>
             </ul>
-          </li> 
+          </li> --> 
          
          
       </div>

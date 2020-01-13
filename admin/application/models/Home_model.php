@@ -1,10 +1,10 @@
 <?php
 
-class About_model extends CI_Model
+class Home_model extends CI_Model
  {
-	function about_insert()
+	function home_add()
 	{	
-		 $about_image='';
+		$about_image='';
 		  //$image_settings=image_setting();
 		  if(isset($_FILES['about_image']) &&  $_FILES['about_image']['name']!='')
 		  {
@@ -16,8 +16,8 @@ class About_model extends CI_Model
 			$_FILES['userfile']['tmp_name'] =   $_FILES['about_image']['tmp_name'];
 			$_FILES['userfile']['error']    =   $_FILES['about_image']['error'];
 			$_FILES['userfile']['size']     =   $_FILES['about_image']['size'];   
-			$config['file_name'] = $rand.'About';      
-			$config['upload_path'] = base_path().'upload/aboutimage/';      
+			$config['file_name'] = $rand.'Home';      
+			$config['upload_path'] = base_path().'upload/homeimage/';      
 			$config['allowed_types'] = 'jpg|jpeg|png|bmp';
 			$this->upload->initialize($config);
 	
@@ -34,8 +34,8 @@ class About_model extends CI_Model
 			$gd_var='gd2';
 			$this->image_lib->initialize(array(
 			  'image_library' => $gd_var,
-			  'source_image' => base_path().'upload/aboutimage/'.$picture['file_name'],
-			  'new_image' => base_path().'upload/about/'.$picture['file_name'],
+			  'source_image' => base_path().'upload/homeimage/'.$picture['file_name'],
+			  'new_image' => base_path().'upload/home/'.$picture['file_name'],
 			  'maintain_ratio' => FALSE,
 			  'quality' => '100%',
 			  'width' => 300,
@@ -52,15 +52,15 @@ class About_model extends CI_Model
 			$this->input->post('prev_about_image');
 			if($this->input->post('pre_about_image')!='')
 			{
-			if(file_exists(base_path().'upload/about/'.$this->input->post('pre_about_image')))
+			if(file_exists(base_path().'upload/home/'.$this->input->post('pre_about_image')))
 			{
-			$link=base_path().'upload/about/'.$this->input->post('pre_about_image');
+			$link=base_path().'upload/home/'.$this->input->post('pre_about_image');
 			unlink($link);
 			}
 	
-			if(file_exists(base_path().'upload/aboutimage/'.$this->input->post('pre_about_image')))
+			if(file_exists(base_path().'upload/homeimage/'.$this->input->post('pre_about_image')))
 			{
-			$link2=base_path().'upload/aboutimage/'.$this->input->post('pre_about_image');
+			$link2=base_path().'upload/homeimage/'.$this->input->post('pre_about_image');
 			unlink($link2);
 			}
 			}
@@ -70,24 +70,25 @@ class About_model extends CI_Model
 			$about_image=$this->input->post('pre_about_image');
 			}
 		  }
-		
-            $data = array(
-			'AboutTitle'=>trim($this->input->post('AboutTitle')),			
-			'AboutDescription'=>trim($this->input->post('AboutDescription')),
-			'AboutImage'=>$about_image,		
-			'IsActive' =>$this->input->post('IsActive'),			
-			'CreatedOn'=>date('Y-m-d')		
-			);
-		  	// echo "<pre>";print_r($data);die;	        
-            $res=$this->db->insert('tblaboutus',$data);	
-			return $res;
+
+
+        $data = array(
+		'HomeTitle'=>trim($this->input->post('HomeTitle')),			
+		'HomeDescription'=>trim($this->input->post('HomeDescription')),
+		'AboutImage'=>$about_image,		
+		'IsActive' =>$this->input->post('IsActive'),			
+		'CreatedOn'=>date('Y-m-d')		
+		);
+	    //echo "<pre>";print_r($data);die;	         
+        $res=$this->db->insert('tblhome',$data);	
+		return $res;
 	}
 
-	function getabout(){
+	function gethome(){
 		$this->db->select('*');
-		$this->db->from('tblaboutus');
+		$this->db->from('tblhome');
 		$this->db->where('IsDelete','0');
-		$this->db->order_by('AboutusId','desc');
+		$this->db->order_by('HomeAboutId','desc');
 		$query=$this->db->get();
 		$res = $query->result();
 		return $res;
@@ -97,17 +98,17 @@ class About_model extends CI_Model
 
 	function getdata($id){
 		$this->db->select("*");
-		$this->db->from("tblaboutus");
+		$this->db->from("tblhome");
 		$this->db->where("IsDelete",'0');
-		$this->db->where("AboutusId",$id);
-	    $this->db->order_by('AboutusId','desc');
+		$this->db->where("HomeAboutId",$id);
+	    $this->db->order_by('HomeAboutId','desc');
 		$query=$this->db->get();
 		return $query->row_array();
 	}
 
-	function about_update(){
+	function home_update(){
 
-		  $AboutusId=$this->input->post('AboutusId');
+		  $HomeAboutId=$this->input->post('HomeAboutId');
 		  $about_image='';
 		  //$image_settings=image_setting();
 		  if(isset($_FILES['about_image']) &&  $_FILES['about_image']['name']!='')
@@ -120,8 +121,8 @@ class About_model extends CI_Model
 			$_FILES['userfile']['tmp_name'] =   $_FILES['about_image']['tmp_name'];
 			$_FILES['userfile']['error']    =   $_FILES['about_image']['error'];
 			$_FILES['userfile']['size']     =   $_FILES['about_image']['size'];   
-			$config['file_name'] = $rand.'About';      
-			$config['upload_path'] = base_path().'upload/aboutimage/';      
+			$config['file_name'] = $rand.'Home';      
+			$config['upload_path'] = base_path().'upload/homeimage/';      
 			$config['allowed_types'] = 'jpg|jpeg|png|bmp';
 			$this->upload->initialize($config);
 	
@@ -138,8 +139,8 @@ class About_model extends CI_Model
 			$gd_var='gd2';
 			$this->image_lib->initialize(array(
 			  'image_library' => $gd_var,
-			  'source_image' => base_path().'upload/aboutimage/'.$picture['file_name'],
-			  'new_image' => base_path().'upload/about/'.$picture['file_name'],
+			  'source_image' => base_path().'upload/homeimage/'.$picture['file_name'],
+			  'new_image' => base_path().'upload/home/'.$picture['file_name'],
 			  'maintain_ratio' => FALSE,
 			  'quality' => '100%',
 			  'width' => 300,
@@ -156,15 +157,15 @@ class About_model extends CI_Model
 			$this->input->post('prev_about_image');
 			if($this->input->post('pre_about_image')!='')
 			{
-			if(file_exists(base_path().'upload/about/'.$this->input->post('pre_about_image')))
+			if(file_exists(base_path().'upload/home/'.$this->input->post('pre_about_image')))
 			{
-			$link=base_path().'upload/about/'.$this->input->post('pre_about_image');
+			$link=base_path().'upload/home/'.$this->input->post('pre_about_image');
 			unlink($link);
 			}
 	
-			if(file_exists(base_path().'upload/aboutimage/'.$this->input->post('pre_about_image')))
+			if(file_exists(base_path().'upload/homeimage/'.$this->input->post('pre_about_image')))
 			{
-			$link2=base_path().'upload/aboutimage/'.$this->input->post('pre_about_image');
+			$link2=base_path().'upload/homeimage/'.$this->input->post('pre_about_image');
 			unlink($link2);
 			}
 			}
@@ -176,16 +177,16 @@ class About_model extends CI_Model
 		  }
 
             $data = array(
-			'AboutusId' =>trim($this->input->post('AboutusId')),	
-			'AboutTitle' =>trim($this->input->post('AboutTitle')),			
-			'AboutDescription' => trim($this->input->post('AboutDescription')),		
+			'HomeAboutId' =>trim($this->input->post('HomeAboutId')),	
+			'HomeTitle' =>trim($this->input->post('HomeTitle')),			
+			'HomeDescription' => trim($this->input->post('HomeDescription')),		
 			'AboutImage'=>$about_image,
 			'IsActive' => $this->input->post('IsActive'),			
-			'CreatedOn'=>date('Y-m-d')		
+			'UpdatedOn'=>date('Y-m-d')		
 			); 
 			//print_r($data);die;
-			$this->db->where("AboutusId",$AboutusId);
-			$res=$this->db->update('tblaboutus',$data);		
+			$this->db->where("HomeAboutId",$HomeAboutId);
+			$res=$this->db->update('tblhome',$data);		
 			return $res;
 	}
 

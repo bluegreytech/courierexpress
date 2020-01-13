@@ -29,9 +29,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $config['base_path']="C:/xampp/htdocs/realestate/admin";
 
 
-$config['base_url'] = 'http://localhost/travels/admin/';
-$config['base_url_site'] = 'http://localhost/travels/admin/';
-$config['base_path']="C:/xampp/htdocs/travels/admin";
+$config['base_url'] = 'http://localhost/courierexpress/admin/';
+$config['base_url_site'] = 'http://localhost/courierexpress/admin/';
+$config['base_path']="C:/xampp/htdocs/courierexpress/admin";
 //echo base_url();
 
 

@@ -13,25 +13,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
         </div>
         <?php } ?>
-        <!-- <div class="col-md-4">
+        <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <a href="javascript:void(0)">
+                    <a href="">
                     <div class="card-block">
                         <div class="media">
                             <div class="media-body text-xs-left">
-                                <h3 class="pink"><?php //echo Count($result);?></h3>
-                                <span>Today B'day Date</span>
+                                <h3 class="pink"><?php echo Count($branch);?></h3>
+                                <span>Total Branch</span>
                             </div>
                             <div class="media-right media-middle">
-                                <i class="icon-gift pink font-large-2 float-xs-right"></i>
+                                <i class="icon-list-ul pink font-large-2 float-xs-right"></i>
                             </div>
                         </div>
                     </div>
                     </a>
                 </div>
             </div>
-        </div> -->
+        </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
@@ -78,11 +78,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="card-block">
                         <div class="media">
                             <div class="media-body text-xs-left">
-                                <h3 class="pink"><?php echo Count($luxurysegment);?></h3>
-                                <span>Luxury Segment Inquiry</span>
+                                <h3 class="pink"><?php echo Count($product);?></h3>
+                                <span>Total  Product</span>
                             </div>
                             <div class="media-right media-middle">
-                                <i class="icon-paper pink font-large-2 float-xs-right"></i>
+                                <i class="icon-product-hunt pink font-large-2 float-xs-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <a href="<?php echo base_url()?>contact/luxuryquotelist">
+                    <div class="card-block">
+                        <div class="media">
+                            <div class="media-body text-xs-left">
+                                <h3 class="pink"><?php echo Count($services);?></h3>
+                                <span>Total Services</span>
+                            </div>
+                            <div class="media-right media-middle">
+                                <i class="icon-tasks pink font-large-2 float-xs-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <a href="<?php echo base_url()?>contact/luxuryquotelist">
+                    <div class="card-block">
+                        <div class="media">
+                            <div class="media-body text-xs-left">
+                                <h3 class="pink"><?php echo Count($resources);?></h3>
+                                <span>Total Resources</span>
+                            </div>
+                            <div class="media-right media-middle">
+                                <i class="icon-adjust pink font-large-2 float-xs-right"></i>
                             </div>
                         </div>
                     </div>

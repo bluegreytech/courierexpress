@@ -85,10 +85,12 @@ class Home extends CI_Controller {
 			redirect(base_url());
 		}		
 		
-		//$data['result']=$this->Login_model->getbdayuser();
+		$data['branch']=$this->Login_model->getbranch();
 		$data['users']=$this->Login_model->getuser();
 		$data['inquiry']=$this->Login_model->get_inquiry();
-		$data['luxurysegment']=$this->Login_model->get_segment();
+		$data['product']=$this->Login_model->get_product();
+		$data['services']=$this->Login_model->get_services();
+		$data['resources']=$this->Login_model->get_resources();
 		$data['recentlyuser']=$this->Login_model->get_recentuser();
 		$data['activeTab']="dashboard";
 		//echo count($data['inquiry']); die;
@@ -344,54 +346,58 @@ class Home extends CI_Controller {
 	}
    
 
-   public function add_pages($msg='')
-    {  //echo "fdsf";die;
+  //  public function add_pages($msg='')
+  //   {  //echo "fdsf";die;
             
-		if(!check_admin_authentication())
-		{
-		redirect('login');
-		}
+		// if(!check_admin_authentication())
+		// {
+		// redirect('login');
+		// }
                 
-		$data = array();
-		$data['activeTab']="add_pages";	
-        $this->load->library('form_validation');
+		// $data = array();
+		// $data['activeTab']="add_pages";	
+  //       $this->load->library('form_validation');
 	
-		$this->form_validation->set_rules('PageTitle', 'Page Title', 'required');
-		$this->form_validation->set_rules('IsActive', 'IsActive', 'required');		
+		// $this->form_validation->set_rules('PageTitle', 'Page Title', 'required');
+		// $this->form_validation->set_rules('IsActive', 'IsActive', 'required');		
 		
-		if($this->form_validation->run() == FALSE){	
+		// if($this->form_validation->run() == FALSE){	
 		
-			if(validation_errors())
-			{
-				$data["error"] = validation_errors();
-				//echo "<pre>";print_r($data);die;
-			}else{
-				$data["error"] = "";
-			}
-			if($_POST){			
-				$data["PageTitle"] = $this->input->post('PageTitle');
-				$data["PageDescription"]   = $this->input->post('PageDescription');
+		// 	if(validation_errors())
+		// 	{
+		// 		$data["error"] = validation_errors();
+		// 		//echo "<pre>";print_r($data);die;
+		// 	}else{
+		// 		$data["error"] = "";
+		// 	}
+		// 	if($_POST){			
+		// 		$data["PageTitle"] = $this->input->post('PageTitle');
+		// 		$data["PageDescription"]   = $this->input->post('PageDescription');
 				
               
 			
-			}else{
-			$oneAdmin=get_page_by_slug('termcondition');
-			//print_r($oneAdmin);die;
-			$data["page_id"] 	= $oneAdmin->page_id;
-			$data["slug"] 		= $oneAdmin->slug;				
-			$data["PageTitle"]      = $oneAdmin->PageTitle;			
-           	$data['PageDescription']=$oneAdmin->PageDescription;
-           	$data['IsActive']=$oneAdmin->IsActive;
+		// 	}else{
+		// 	$oneAdmin=get_page_by_slug('termcondition');
+		// 	//print_r($oneAdmin);die;
+		// 	$data["page_id"] 	= $oneAdmin->page_id;
+		// 	$data["slug"] 		= $oneAdmin->slug;				
+		// 	$data["PageTitle"]      = $oneAdmin->PageTitle;			
+  //          	$data['PageDescription']=$oneAdmin->PageDescription;
+  //          	$data['IsActive']=$oneAdmin->IsActive;
 			
-			}
-		}else{
-			//echo "else fdf";die;
-            $this->session->set_flashdata('successmsg', 'Page has been updated successfully');				
-			$res=$this->Login_model->updatePages();
-			redirect('home/add_pages/');
-		}
+		// 	}
+		// }else{
+		// 	//echo "else fdf";die;
+  //           $this->session->set_flashdata('successmsg', 'Page has been updated successfully');				
+		// 	$res=$this->Login_model->updatePages();
+		// 	redirect('home/add_pages/');
+		// }
 
-        $this->load->view('common/termsandcondition',$data);    
+  //       $this->load->view('common/termsandcondition',$data);    
             
-    }
+  //   }
+
+
+		
+
 }

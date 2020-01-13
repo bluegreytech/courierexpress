@@ -13,7 +13,7 @@
                     <div class="text-center"><img src="<?php echo base_url(); ?>default/images/logo/logo.png" alt="branding logo" width="100%"></div>
                     
                 </div>
-                <h6 class="card-subtitle line-on-side text-muted text-xs-center font-small-3 pt-2"><span>Login with Yashdeep Travels</span></h6>
+                <h6 class="card-subtitle line-on-side text-muted text-xs-center font-small-3 pt-2"><span>Login with Gandhi Express</span></h6>
             </div>
             <div class="card-body collapse in">
                 <div class="card-block">
