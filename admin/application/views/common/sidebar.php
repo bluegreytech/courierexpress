@@ -93,6 +93,40 @@
             </ul>
           </li> 
 
+
+           <li class="nav-item <?php echo($activeTab == "courieradd" || $activeTab =="courierlist") ? "open" : ""; ?>">
+            <a class="<?php echo ($activeTab == "courieradd" || $activeTab == "courierlist") ? "active" : ""; ?>">
+              <i class="icon-envelope"></i><span data-i18n="nav.dash.main" class="menu-title">Courier Type</span>
+            </a>
+            <ul class="menu-content">
+              <li>
+                <a href="<?php echo base_url(); ?>couriertype/courieradd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "courieradd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add Type</a>
+              </li>
+
+              <li>
+                <a href="<?php echo base_url(); ?>couriertype/courierlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "courierlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Type</a>
+              </li>
+            </ul>
+          </li> 
+
+
+          <li class="nav-item <?php echo($activeTab == "clockadd" || $activeTab =="clocklist") ? "open" : ""; ?>">
+            <a class="<?php echo ($activeTab == "clockadd" || $activeTab == "clocklist") ? "active" : ""; ?>">
+              <i class="icon-clock-o"></i><span data-i18n="nav.dash.main" class="menu-title">Country Clock</span>
+            </a>
+            <ul class="menu-content">
+              <li>
+                <a href="<?php echo base_url(); ?>clock/clockadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "clockadd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add Clock</a>
+              </li>
+
+              <li>
+                <a href="<?php echo base_url(); ?>clock/clocklist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "clocklist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Clock</a>
+              </li>
+            </ul>
+          </li> 
+
+
+
           <li class="nav-item <?php echo($activeTab == "serviceadd" || $activeTab =="servicelist") ? "open" : ""; ?>">
             <a class="<?php echo ($activeTab == "serviceadd" || $activeTab == "servicelist") ? "active" : ""; ?>">
               <i class="icon-tasks"></i><span data-i18n="nav.dash.main" class="menu-title">Services</span>

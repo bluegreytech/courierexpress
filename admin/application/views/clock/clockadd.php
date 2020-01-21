@@ -15,66 +15,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="card">
 				<div class="card-header">
 					<h4 class="card-title" id="basic-layout-form">
-					<?php if($AboutusId==1)
+					<?php if($ClockId==1)
 					{
-						echo	"Edit About Us";
+						echo	"Edit Clock";
 					}
 					else{
-					echo	"Add About Us";
+					echo	"Add Clock";
 					}
 					?>
 					<a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-					<a href="<?php echo base_url();?>About/Aboutlist" class="btn btn-black" style="float:right">Back to About List</a>
+					<a href="<?php echo base_url();?>clock/clocklist" class="btn btn-black" style="float:right">Back to Clock List</a>
 				</div>
 				</h4>
 				<div class="card-body collapse in">
 					<div class="card-block">
 				
 						<form class="form" method="post" enctype="multipart/form-data" id="form_valid"
-						 action="<?php echo base_url();?>About/Aboutadd">
+						 action="<?php echo base_url();?>clock/clockadd">
 					
 							<div class="form-body">
 								<h4 class="form-section"><i class="icon-clipboard4"></i> Requirements</h4>
 							
 								<div class="form-group">
-									<input type="hidden" value="<?php echo $AboutusId; ?>" name="AboutusId">
-									<label>About Title</label>
-									<input type="text" class="form-control" placeholder="About Title" name="AboutTitle" value="<?php echo $AboutTitle;?>" minlength="3" maxlength="100">
+									<input type="hidden" value="<?php echo $ClockId; ?>" name="ClockId">
+									<label>Country Title</label>
+									<input type="text" class="form-control" placeholder="Country Title" name="CountryTitle" value="<?php echo $CountryTitle;?>" minlength="3" maxlength="100">
 								</div>
 							
+								<div class="form-group">
+									<label>Country Time</label>
+									<input type="text" class="form-control" placeholder="Country Time" name="CountryTime" value="<?php echo $CountryTime;?>" minlength="3" maxlength="100">
+								</div>
 
 								<div class="form-group">
-									<label>About Description</label>
-									<textarea id="editor1" rows="5" class="form-control" name="AboutDescription">
-									<?php echo $AboutDescription; ?></textarea>
-									<script>
-										CKEDITOR.replace('editor1');
-									</script>
+									<label>Country Time Zone</label>
+									<input type="text" class="form-control" placeholder="Country Time Zone" name="CountryTimeZone" value="<?php echo $CountryTimeZone;?>" minlength="3" maxlength="100">
 								</div>
 
-								
-
-								
-								<div class="form-group  uploadfrm">
-									<label>About Image</label>
-									<p><span class="btn btn-black btn-file">
-										<input type="hidden" name="pre_about_image" value="<?php echo $AboutImage;?>">
-									Upload about image <input type="file" name="about_image"  onchange="readURL(this);">
-									</span></p>									
-									<span id="profileerror"></span>
+								<div class="form-group">
+									<label>Time Scope</label>
+									<input type="text" class="form-control" placeholder="Time Scope" name="TimeScope" value="<?php echo $TimeScope;?>" minlength="2" maxlength="100">
 								</div>
-								<h6>Uplopad only jpeg,jpg,png,bmp image file</h6>
-									<div class="preview">
-									
-									<?php if($AboutImage){ ?>
-										<img id="blah" src="<?php echo base_url()?>upload/aboutimage/<?php echo $AboutImage;?>" class="img-thumbnail border-0" style="display: block;  width: 100px; height: 100px;">
 
-									<?php } else{?>
-									<img id="blah" src="" class="img-thumbnail border-0" style="display: none;  width: 100px; height: 100px;">
-									<?php } ?>
-
-								</div>
-								
 								<?php  if($IsActive!=''){ ?>                                
 								<div class="form-group">
 									<label>Status</label>
@@ -113,9 +95,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 							<div class="form-actions">
-									 <button class="btn btn-black " type="submit"><i class="icon-ok"></i> <?php echo ($AboutusId!='')?'Update':'Submit' ?></button>
+									 <button class="btn btn-black " type="submit"><i class="icon-ok"></i> <?php echo ($ClockId!='')?'Update':'Submit' ?></button>
 							
-									<input type="button" name="cancel" class="btn btn-default" value="Cancel" onClick="location.href='<?php echo base_url(); ?>About/Aboutlist'">
+									<input type="button" name="cancel" class="btn btn-default" value="Cancel" onClick="location.href='<?php echo base_url(); ?>Product/productlist'">
 								
 							</div>
 						</form>
@@ -140,45 +122,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $(document).ready(function()
 {
-	$.validator.addMethod('filesize', function (value, element, param) {
-       
-	   return this.optional(element) || (element.files[0].size <= param)
-   } ,'File size must be equal to or less then 2MB'); 
        $('#form_valid').validate({
 			rules: {
-				AboutTitle:{              
+				CountryTitle:{              
 					required: true,                
 				}, 
-				about_image:{
-					//required: true,
-					extension: "jpg|jpeg|png|bmp",
-					filesize: 2097152,   
+				CountryTime:{
+					required: true,	   
 				}, 
-							
+				CountryTimeZone:{              
+					required: true,                
+				}, 
+				TimeScope:{
+					required: true,	   
+				}, 		
 			 },
-
-			 errorPlacement: function (error, element) {
-            //console.log('dd', element.attr("name"))
-            if (element.attr("name") == "about_image") {
-                error.appendTo("#profileerror");
-            } else{
-                  error.insertAfter(element)
-            }
-        } 
     });
 });
-
- 
-
-function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#blah').css('display', 'block');
-                    $('#blah').attr('src', e.target.result);
-                };
-             reader.readAsDataURL(input.files[0]);
-            }
-        }	                
 
 </script>
