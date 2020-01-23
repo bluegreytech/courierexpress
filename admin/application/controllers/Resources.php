@@ -37,14 +37,14 @@ class Resources extends CI_Controller {
 				{
 					$this->Resources_model->resources_update();
 					$this->session->set_flashdata('success', 'Record has been Updated Succesfully!');
-					redirect('Resources/resourceslist');
+					redirect('resources/resourceslist');
 					
 				}
 				else
 				{ 
 					$this->Resources_model->resources_add();
 					$this->session->set_flashdata('success', 'Record has been Inserted Succesfully!');
-					redirect('Resources/resourceslist');
+					redirect('resources/resourceslist');
 				
 				}
 		}	

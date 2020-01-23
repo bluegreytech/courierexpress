@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <a href="">
+                    <a href="<?php echo base_url(); ?>contact/contactlist">
                     <div class="card-block">
                         <div class="media">
                             <div class="media-body text-xs-left">
@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <a href="<?php echo base_url()?>contact/Contactlist">
+                    <a href="<?php echo base_url(); ?>contact/inquirylist">
                     <div class="card-block">
                         <div class="media">
                             <div class="media-body text-xs-left">
@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <a href="<?php echo base_url()?>contact/luxuryquotelist">
+                    <a href="<?php echo base_url()?>product/productlist">
                     <div class="card-block">
                         <div class="media">
                             <div class="media-body text-xs-left">
@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <a href="<?php echo base_url()?>contact/luxuryquotelist">
+                    <a href="<?php echo base_url()?>services/servicelist">
                     <div class="card-block">
                         <div class="media">
                             <div class="media-body text-xs-left">
@@ -114,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <a href="<?php echo base_url()?>contact/luxuryquotelist">
+                    <a href="<?php echo base_url(); ?>Resources/resourceslist">
                     <div class="card-block">
                         <div class="media">
                             <div class="media-body text-xs-left">

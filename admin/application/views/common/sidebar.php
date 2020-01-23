@@ -88,7 +88,7 @@
               </li>
 
               <li>
-                <a href="<?php echo base_url(); ?>Product/productlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "productlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Product</a>
+                <a href="<?php echo base_url(); ?>product/productlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "productlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Product</a>
               </li>
             </ul>
           </li> 
@@ -125,7 +125,20 @@
             </ul>
           </li> 
 
+          <li class="nav-item <?php echo($activeTab == "newsadd" || $activeTab =="newslist") ? "open" : ""; ?>">
+            <a class="<?php echo ($activeTab == "newsadd" || $activeTab == "newslist") ? "active" : ""; ?>">
+              <i class="icon-newspaper"></i><span data-i18n="nav.dash.main" class="menu-title">News</span>
+            </a>
+            <ul class="menu-content">
+              <li>
+                <a href="<?php echo base_url(); ?>news/newsadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "newsadd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add News</a>
+              </li>
 
+              <li>
+                <a href="<?php echo base_url(); ?>news/newslist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "newslist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of News</a>
+              </li>
+            </ul>
+          </li> 
 
           <li class="nav-item <?php echo($activeTab == "serviceadd" || $activeTab =="servicelist") ? "open" : ""; ?>">
             <a class="<?php echo ($activeTab == "serviceadd" || $activeTab == "servicelist") ? "active" : ""; ?>">
@@ -180,10 +193,10 @@
             </a>
             <ul class="menu-content">
               <li>
-                <a href="<?php echo base_url(); ?>Contact/contactadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "contactadd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add Contcat</a>
+                <a href="<?php echo base_url(); ?>contact/contactadd" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "contactadd") ? "active" : ""; ?>"><i class="icon-plus"></i> Add Contcat</a>
               </li>
               <li>
-                <a href="<?php echo base_url(); ?>Contact/contactlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "contactlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Contcat </a>
+                <a href="<?php echo base_url(); ?>contact/contactlist" data-i18n="nav.dash.main" class="menu-item <?php echo ($activeTab == "contactlist") ? "active" : ""; ?>"><i class="icon-file-text2"></i>List of Contcat </a>
               </li>
             </ul>
           </li> 
